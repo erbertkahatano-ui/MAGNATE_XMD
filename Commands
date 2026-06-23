@@ -1,0 +1,179 @@
+// ===============================
+//   MAGNATE XMD ULTRA FULL PRO
+// ===============================
+
+const os = require("os")
+
+global.botname = "MAGNATE XMD";
+global.ownername = "Erbert";
+global.prefix = ".";
+
+function runtime(seconds) {
+    seconds = Number(seconds);
+    const d = Math.floor(seconds / 86400);
+    const h = Math.floor(seconds % 86400 / 3600);
+    const m = Math.floor(seconds % 3600 / 60);
+    const s = Math.floor(seconds % 60);
+    return `${d}d ${h}h ${m}m ${s}s`;
+}
+
+const menu = (pushname, plugins) => {
+
+const uptime = runtime(process.uptime());
+const totalMem = (os.totalmem() / 1024 / 1024).toFixed(0);
+const freeMem = (os.freemem() / 1024 / 1024).toFixed(0);
+
+return `
+┏▣ ◈ *${global.botname}* ◈
+┃ *ᴜsᴇʀ* : ${pushname || "User"}
+┃ *ᴏᴡɴᴇʀ* : ${global.ownername}
+┃ *ᴘʀᴇғɪx* : [ ${global.prefix} ]
+┃ *ʜᴏsᴛ* : Render
+┃ *ᴠᴇʀsɪᴏɴ* : 2.0.0 ULTRA
+┃ *ᴘʟᴜɢɪɴs* : ${plugins}
+┃ *ᴜᴘᴛɪᴍᴇ* : ${uptime}
+┃ *ʀᴀᴍ* : ${freeMem}MB / ${totalMem}MB
+┗▣
+
+╭━━━〔 🤖 AI SYSTEM 〕━━━╮
+│ gpt
+│ gemini
+│ deepseek
+│ blackbox
+│ analyze
+│ code
+│ generate
+│ story
+│ summarize
+│ teach
+│ translate2
+│ recipe
+╰━━━━━━━━━━━━━━━━━━━╯
+
+╭━━━〔 🎬 MEDIA ENGINE 〕━━━╮
+│ dalle
+│ image
+│ video
+│ toaudio
+│ tovideo
+│ sticker
+│ toimage
+│ tourl
+╰━━━━━━━━━━━━━━━━━━━╯
+
+╭━━━〔 ⬇️ DOWNLOAD HUB 〕━━━╮
+│ tiktok
+│ instagram
+│ facebook
+│ twitter
+│ mediafire
+│ gdrive
+│ apk
+│ song
+│ song2
+│ video
+│ videodoc
+│ telesticker
+╰━━━━━━━━━━━━━━━━━━━╯
+
+╭━━━〔 🎉 FUN ZONE 〕━━━╮
+│ memes
+│ jokes
+│ quotes
+│ fact
+│ trivia
+│ truth
+│ dare
+│ truthordare
+╰━━━━━━━━━━━━━━━━━━━╯
+
+╭━━━〔 👥 GROUP CONTROL 〕━━━╮
+│ add
+│ kick
+│ promote
+│ demote
+│ tagall
+│ hidetag
+│ link
+│ resetlink
+│ welcome
+│ close
+│ open
+│ setdesc
+│ setgroupname
+│ poll
+╰━━━━━━━━━━━━━━━━━━━╯
+
+╭━━━〔 🔎 SEARCH ENGINE 〕━━━╮
+│ weather
+│ imdb
+│ lyrics
+│ define
+│ yts
+│ shazam
+╰━━━━━━━━━━━━━━━━━━━╯
+
+╭━━━〔 🧰 TOOLS PRO 〕━━━╮
+│ calculate
+│ qrcode
+│ tinyurl
+│ fancy
+│ ssweb
+│ fliptext
+│ genpass
+│ sticker
+│ toimage
+│ tourl
+╰━━━━━━━━━━━━━━━━━━━╯
+
+╭━━━〔 ⚙️ SETTINGS 〕━━━╮
+│ mode
+│ autobio
+│ autoread
+│ antidelete
+│ anticall
+│ chatbot
+│ setwelcome
+│ setgoodbye
+│ setprefix
+│ setbotname
+│ setownername
+╰━━━━━━━━━━━━━━━━━━━╯
+
+╭━━━〔 ⚽ SPORTS LIVE 〕━━━╮
+│ eplmatches
+│ eplstandings
+│ clmatches
+│ laligamatches
+│ serieamatches
+│ wcmatches
+╰━━━━━━━━━━━━━━━━━━━╯
+
+╭━━━〔 🧑‍💻 OWNER PANEL 〕━━━╮
+│ restart
+│ update
+│ block
+│ unblock
+│ join
+│ leave
+│ setbio
+│ setprofilepic
+│ warn
+│ setprefix
+│ disk
+│ hostip
+╰━━━━━━━━━━━━━━━━━━━╯
+
+╭━━━〔 📊 SYSTEM INFO 〕━━━╮
+│ ping
+│ botstatus
+│ runtime
+│ repo
+│ time
+╰━━━━━━━━━━━━━━━━━━━╯
+
+`;
+
+};
+
+module.exports = menu;
